@@ -1,8 +1,8 @@
 from langchain.chains import ConversationalRetrievalChain
-from langchain.chat_models import ChatOpenAI
+from langchain_community.chat_models import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
-from langchain.vectorstores import FAISS
-from langchain.embeddings import OpenAIEmbeddings
+from langchain_community.vectorstores import FAISS
+from langchain_community.embeddings import OpenAIEmbeddings
 import warnings
 import argparse
 
@@ -36,7 +36,5 @@ args = parser.parse_args()
 query = args.question
 # 不需要chat_history直接设置为空列表就行了
 result = qa({"question": query, "chat_history": []})
-print(result["answer"])
-print("Source:\n", result["source_documents"][0].metadata["source"])
 print(result["answer"])
 print("Source:\n", result["source_documents"][0].metadata["source"])
