@@ -5,6 +5,8 @@ from langchain.chat_models import ChatOpenAI
 from langchain.chains import VectorDBQAWithSourcesChain
 from langchain.vectorstores import FAISS
 from langchain.embeddings import OpenAIEmbeddings
+import warnings
+warnings.filterwarnings("ignore")
 
 api_base="https://api.chatanywhere.tech/v1"
 api_key="sk-6lDdDxc8f9V7eEuT9egSqhe3VbtLyTBLHnr3LP5faS9vSf0s"
